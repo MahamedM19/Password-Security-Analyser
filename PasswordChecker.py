@@ -1,4 +1,4 @@
-Print("----- The BEST password security analsyer in the world -----")
+print("----- The BEST password security analsyer in the world -----")
 
 password = input("Please Enter your password and I shall analyse it for you: ")
 
