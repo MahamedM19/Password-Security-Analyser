@@ -4,7 +4,11 @@ import string
 print("----- The BEST password security analsyer in the world -----")
 
 password = input("Please Enter your password and I shall analyse it for you: ")
-password_len = len(password)
+
+def check_length(password):
+    return len(password)
+password_len = check_length(password)
+
 score = 0
 
 lowercase = any(char in string.ascii_lowercase for char in password)
