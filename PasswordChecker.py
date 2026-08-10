@@ -1,6 +1,5 @@
 import string
 
-
 print("----- The BEST password security analsyer in the world -----")
 
 password = input("Please Enter your password and I shall analyse it for you: ")
@@ -9,12 +8,17 @@ def check_length(password):
     return len(password)
 password_len = check_length(password)
 
-score = 0
 
-lowercase = any(char in string.ascii_lowercase for char in password)
-uppercase = any(char in string.ascii_uppercase for char in password)
-numbers = any(char in string.digits for char in password)
-special = any(char in string.punctuation for char in password)
+def check_character_types(password):
+    lowercase = any(char in string.ascii_lowercase for char in password)
+    uppercase = any(char in string.ascii_uppercase for char in password)
+    numbers = any(char in string.digits for char in password)
+    special = any(char in string.punctuation for char in password)
+
+    return lowercase, uppercase, numbers, special 
+lowercase, uppercase, numbers, special = check_character_types(password)
+
+score = 0
 
 if password_len >= 6:
     score += 1
