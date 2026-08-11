@@ -54,26 +54,51 @@ if special:
 
 
 
-
-print("Your password length is", password_len)
-print("Common password:", commonpassword)
-
-
-print("\nAnalysis:")
-print("lowercase:", lowercase)
-print("uppercase:", uppercase)
-print("numbers:", numbers)
-print("special", special)
+print("\n====================================")
+print("      PASSWORD STRENGTH REPORT")
+print("====================================")
 
 
+print("\nPassword Length:", password_len)
+
+
+print("\nCharacter Analysis:")
+
+if lowercase:
+    print("Lowercase letters: ✓")
+else:
+    print("Lowercase letters: ✗")
+
+if uppercase:
+    print("Uppercase letters: ✓")
+else:
+    print("Uppercase letters: ✗")
+
+if numbers:
+    print("Numbers: ✓")
+else:
+    print("Numbers: ✗")
+
+if special:
+    print("Special characters: ✓")
+else:
+    print("Special characters: ✗")
+
+
+print("\nSecurity score:", score,"/ 5")
+
+print("\nCommon password check:")
+if commonpassword:
+    print("\n✗ Your password has been found in the common password list.")
+else:
+    print("✓ Your password has NOT been found in the common password list.")
 
 if commonpassword:
-    print("\nTHIS IS A COMMON PASSWORD")
-    print("PLEASE DO NOT USE THIS PASSWORD! IT IS VERY WEAK")
+    print("\nYour password is a common password. It has been rated -1000")
 elif score <= 2:
-    print("Your password is WEAK")
+    print("\nYour password has been deemed weak.")
 elif score <= 4:
-    print("Your password is meh")
+    print("\nYour password has a medium strength level.")
 else:
-    print("Wow! your password is very strong")
+    print("\nYour password is very strong!")
 
