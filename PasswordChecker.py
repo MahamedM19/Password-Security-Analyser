@@ -1,8 +1,10 @@
 import string
+from getpass import getpass
+
 
 print("----- The BEST password security analsyer in the world -----")
 
-password = input("Please Enter your password and I shall analyse it for you: ")
+password = getpass("Please Enter your password and I shall analyse it for you: ")
 
 
 common_passwords = {
@@ -52,7 +54,7 @@ if special:
 
 
 
-print("Your password is", password)
+
 print("Your password length is", password_len)
 print("Common password:", commonpassword)
 
@@ -63,13 +65,15 @@ print("uppercase:", uppercase)
 print("numbers:", numbers)
 print("special", special)
 
-if score <= 2:
+
+
+if commonpassword:
+    print("\nTHIS IS A COMMON PASSWORD")
+    print("PLEASE DO NOT USE THIS PASSWORD! IT IS VERY WEAK")
+elif score <= 2:
     print("Your password is WEAK")
 elif score <= 4:
     print("Your password is meh")
 else:
     print("Wow! your password is very strong")
 
-if commonpassword:
-    print("\nTHIS IS A COMMON PASSWORD")
-    print("PLEASE DO NOT USE THIS PASSWORD!")
