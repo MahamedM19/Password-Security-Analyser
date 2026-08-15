@@ -40,11 +40,11 @@ If it is a common password, it is automatically considered a weak password and w
 
 # Scoring System
 The password will then be scored based on the following:
-# Password length > 6: +1 score
-# Lowercase letter: +1 score
-# Uppercase letter: +1 score
-# Numbers: +1 score
-# Special character: +1 score
+, Password length > 6: +1 score
+, Lowercase letter: +1 score
+, Uppercase letter: +1 score
+, Numbers: +1 score
+, Special character: +1 score
 
 The maximum score is 5.
 
