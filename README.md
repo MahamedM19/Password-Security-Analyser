@@ -29,16 +29,16 @@ The program will begin by checking the length of the password.
 
 - Character Complexity
 The program will then check whether to password contains one of the following:
-# Lowercase letters
-# Uppercase letters
-# Numbers
-# Special characters
+, Lowercase letters
+, Uppercase letters
+, Numbers
+, Special characters
 
 - Common Passowrd Detection
 The program will then cross-examine the inputted password against a common password list.
 If it is a common password, it is automatically considered a weak password and won't be scored.
 
-- Scoring System
+# Scoring System
 The password will then be scored based on the following:
 # Password length > 6: +1 score
 # Lowercase letter: +1 score
